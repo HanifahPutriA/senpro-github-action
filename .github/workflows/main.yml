@@ -40,7 +40,7 @@ jobs:
         script: |
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/ssh-praktikan101
-          echo "Cel folder project";
+          echo "CeK folder project";
           [ ! -d "${HOME}/senpro/504042/modul02/senpro-github-action/" ] &&
             {
               echo "Repositpory belum di-clode. Clonning..";
