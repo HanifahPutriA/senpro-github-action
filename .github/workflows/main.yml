@@ -37,30 +37,30 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-      script:
-        eval "$(ssh-agent -s)"
-        ssh-add ~/.ssh/ssh-praktikan101
-        echo "Cel folder project";
-        [ ! -d "${HOME}/senpro/504042/modul02/senpro-github-action/' } &&
-          {
-            encho "Repositpory belum di-clode. Clonning..";
-            mkdir -p ~/senpro/504042/modul02;
-            cd ~/senpro/504042/modul02;
-            git clone https://github.com/HanifahPutriA/senpro-github-action;
-            encho "Install Package and Build Project";
-            npm install;
-            npm run build;
-          } ||
-          {
-            echo "Repository sudah ada. Building..";
-            mkdir -p ~/senpro/504042/modul02;
-            cd ~/senpro/504042/modul02;
-            git restore .;
-            git pull origin main;
-            echo "Install Package dan Build Project";
-            npm install;
-            npm run build;
-          }
+        script:
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/ssh-praktikan101
+          echo "Cel folder project";
+          [ ! -d "${HOME}/senpro/504042/modul02/senpro-github-action/' } &&
+            {
+              encho "Repositpory belum di-clode. Clonning..";
+              mkdir -p ~/senpro/504042/modul02;
+              cd ~/senpro/504042/modul02;
+              git clone https://github.com/HanifahPutriA/senpro-github-action;
+              encho "Install Package and Build Project";
+              npm install;
+              npm run build;
+            } ||
+            {
+              echo "Repository sudah ada. Building..";
+              mkdir -p ~/senpro/504042/modul02;
+              cd ~/senpro/504042/modul02;
+              git restore .;
+              git pull origin main;
+              echo "Install Package dan Build Project";
+              npm install;
+              npm run build;
+            }
         
       
       
