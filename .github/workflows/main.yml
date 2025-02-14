@@ -37,7 +37,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script:
+        script: |
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/ssh-praktikan101
           echo "Cel folder project";
