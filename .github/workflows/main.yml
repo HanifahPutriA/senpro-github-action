@@ -43,7 +43,7 @@ jobs:
           echo "Cel folder project";
           [ ! -d "${HOME}/senpro/504042/modul02/senpro-github-action/" ] &&
             {
-              encho "Repositpory belum di-clode. Clonning..";
+              echo "Repositpory belum di-clode. Clonning..";
               mkdir -p ~/senpro/504042/modul02;
               cd ~/senpro/504042/modul02;
               git clone https://github.com/HanifahPutriA/senpro-github-action;
