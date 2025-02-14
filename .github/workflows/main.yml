@@ -47,7 +47,7 @@ jobs:
               mkdir -p ~/senpro/504042/modul02;
               cd ~/senpro/504042/modul02;
               git clone https://github.com/HanifahPutriA/senpro-github-action;
-              encho "Install Package and Build Project";
+              echo "Install Package and Build Project";
               npm install;
               npm run build;
             } ||
@@ -61,7 +61,8 @@ jobs:
               npm install;
               npm run build;
             }
-        
+
+      
       
       
   
